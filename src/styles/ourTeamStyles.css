@@ -2,7 +2,6 @@
   width: auto;
   height: auto;
   display: flex;
-  background-color: #0f1e27;
   flex-direction: column; /* Stack elements vertically on small screens */
   align-items: center; /* Center items horizontally */
 }
@@ -36,8 +35,8 @@
   display: flex;
   flex-wrap: wrap; /* Allow cards to wrap to next line */
   justify-content: center; /* Center cards horizontally */
-  gap: 20px; /* Add gap between cards */
-  margin-bottom: 100px;
+  gap: 55px; /* Add gap between cards */
+  margin-bottom: 50px;
 }
 
 .Devcard {
@@ -67,7 +66,7 @@
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   padding: 15px;
   font-size: 20px;
-  margin-top: 20px; /* Adjust margin as needed */
+  margin-top: 10px; /* Adjust margin as needed */
 }
 
 .socialbar {
@@ -77,7 +76,7 @@
   border-radius: 3em;
   width: 90%;
   padding: 14px;
-  margin-top: 20px; /* Adjust margin as needed */
+  margin-top: 10px; /* Adjust margin as needed */
   color: white;
   box-shadow: 3px 3px 15px rgb(0, 0, 0), -3px -3px 15px rgb(58, 58, 58);
 }
@@ -91,8 +90,8 @@
   color: #c9510c;
 }
 
-#instagram:hover {
-  color: #d62976;
+#gmail:hover {
+  color: #EA4335;
 }
 
 #facebook:hover {

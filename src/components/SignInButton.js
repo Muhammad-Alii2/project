@@ -5,7 +5,7 @@ import React from "react";
 const SignInButton = () => {
   return (
     <button
-      className="btn btn-outline-success text-green font-monospace"
+      className="btn btn-outline-success text-green" style={{fontFamily: "kufi", letterSpacing:"2px"}}
       onClick={() => {
         signIn("google");
       }}

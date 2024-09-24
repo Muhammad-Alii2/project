@@ -63,7 +63,7 @@ const ChapterCard = forwardRef(
 
     return (
       <div
-        className="card container m-2"
+        className="card container mt-1 mb-2 border-0"
         key={chapter.id}
         style={{
           backgroundColor:
@@ -72,12 +72,12 @@ const ChapterCard = forwardRef(
       >
         <div className="row align-items-center">
           <div className="col">
-            <h5 className="fs-5 m-1" style={{ fontFamily: "quando" }}>
+            <h5 className="fs-4 m-1" style={{ fontFamily: "kufi" }}>
               Chapter-{chapterIndex + 1}: {chapter.name}
             </h5>
           </div>
           <div className="col-auto m-1">
-            {  isPending && <div className="spinner-border text-warning" style={{width: "1.3rem", height: "1.3rem"}} role="status">
+            {  isPending && <div className="spinner-border mt-1" style={{width: "1.3rem", height: "1.3rem"}} role="status">
               <span className="visually-hidden">Loading...</span>
             </div>}
           </div>

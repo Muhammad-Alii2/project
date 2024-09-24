@@ -1,4 +1,4 @@
-.button {
+.sidebarButton {
   font-size: 17px;
   background: transparent;
   border: none;
@@ -9,7 +9,7 @@
   cursor: pointer;
 }
 
-.button::before {
+.sidebarButton::before {
   content: "";
   position: absolute;
   left: 0;
@@ -20,16 +20,16 @@
   transition: 0.5s ease;
 }
 
-.button:hover {
+.sidebarButton:hover {
   color: #1e1e2b;
   transition-delay: 0.5s;
 }
 
-.button:hover::before {
+.sidebarButton:hover::before {
   width: 100%;
 }
 
-.button::after {
+.sidebarButton::after {
   content: "";
   position: absolute;
   left: 0;
@@ -41,7 +41,7 @@
   z-index: -1;
 }
 
-.button:hover::after {
+.sidebarButton:hover::after {
   height: 100%;
   transition-delay: 0.4s;
   color: aliceblue;

@@ -1,6 +1,6 @@
 .CreateCourseForm{
     width: 100%;
-    height: 100vh;
+    min-height: 100vh; /* Minimum height of the gallery, covering full viewport */
      background-image:linear-gradient(rgba(50, 2, 2, 0.856),rgba(0, 0, 0, 0.849)), url('/images/bg1.jpg'); 
     background-position: center; 
      background-size: cover;

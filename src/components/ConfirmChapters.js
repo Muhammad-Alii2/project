@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, useEffect, useRef, useMemo } from "react";
 import ChapterCard from "./ChapterCard";
+import style from "@/styles/buttons/CC_buttons.css";
 import Link from "next/link";
 
 const ConfirmChapters = ({ course }) => {
@@ -24,14 +25,16 @@ const ConfirmChapters = ({ course }) => {
     }
   }, [totalChaptersCount, completedChapters]);
   return (
-    <div className="card container w-75 mt-2 mb-5 rounded-3 text-white bg-dark-subtle col-form-label ">
+    <div className="card container w-75 mt-2 mb-5 text-white col-form-label border-0"
+    style={{ fontFamily: "kufi", background: '#0d1117', borderRadius: '12px', }}
+    >
       {course.units.map((unit, unitIndex) => {
         return (
           <div key={unitIndex} className="m-2">
             <h1 className=" text-body-secondary fs-5" style={{ fontFamily: "asul", fontWeight:"bold"}}>
               Unit {unitIndex + 1}
             </h1>
-            <h4 className=" fw-bold fs-2 text-capitalize">{unit.name}</h4>
+            <h4 className=" fw-bold fs-3 text-capitalize"style={{ fontFamily: "kufi", fontWeight:"bold"}} >{unit.name}</h4>
             <div>
               {unit.chapters.map((chapter, chapterIndex) => {
                 return (
@@ -50,20 +53,21 @@ const ConfirmChapters = ({ course }) => {
         );
       })}
       <div className="container d-inline-flex gap-3 col-form-label justify-content-center">
-        <hr className="flex-grow-1 bg-secondary " />
-        <Link href="/create" className="btn btn-light fw-bold">
+      <hr className="flex-grow-1 bg-secondary" style={{ height: "4px", border: "none" }} />
+        <Link href="/create" className="btn btn-secondary fw-bold">
           Back
         </Link>
         {totalChaptersCount === completedChapters.size ? (
           <Link
             href={`/course/${course.id}/0/0`}
-            className="btn btn-warning fw-bold"
+            className="genButton fw-bold p-2"
           >
             Go to next step
           </Link>
         ) : (
           <button
-            className="btn btn-warning fw-bold"
+            className="genButton fw-bold"
+            style={{ fontFamily: "kufi"}}
             type="button"
             disabled={Loading}
             onClick={() => {
@@ -73,10 +77,10 @@ const ConfirmChapters = ({ course }) => {
               });
             }}
           >
-            Generate
+            Finish Course Generation
           </button>
         )}
-        <hr className="flex-grow-1 bg-secondary" />
+        <hr className="flex-grow-1 bg-secondary" style={{ height: "4px", border: "none" }} />
       </div>
     </div>
   );

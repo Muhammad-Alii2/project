@@ -1,0 +1,164 @@
+ /* gallery generation button styling */
+.genButton {
+    font-size: 16px;
+    letter-spacing: 2px;
+    background-color: #f09042;
+    text-decoration: none;
+    text-transform: capitalize;
+    color: black;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    position: relative;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+  
+  .genButton:active {
+    box-shadow: 0px 0px 0px 0px;
+    top: 5px;
+    color: black;
+    left: 5px;
+  }
+  
+  @media (min-width: 768px) {
+    .genButton {
+      padding: 0.25em 0.75em;
+    }
+  }
+
+
+
+
+
+
+ /* gallery add button styling */
+  .addbutton {
+    position: relative;
+    letter-spacing: 4px;
+    width: 50px;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    border: none;
+    background-color: #6c757d;
+    border-radius: 8px;
+  }
+  
+  .addbutton, .button__icon, .button__text {
+    transition: all 0.3s;
+  }
+  
+  .addbutton .button__text {
+    transform: translateX(2.5px);
+    font-weight: 600;
+    font-size: 15px;
+  }
+  
+  .addbutton .button__icon {
+    position: absolute;
+    transform: translateX(76px);
+    height: 105%;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+  }
+  
+  .addbutton .svg {
+    width: 30px;
+    stroke: #fff;
+  }
+  
+  .addbutton:hover {
+    background: #34974d;
+  }
+  
+  .addbutton:hover .button__text {
+    color: transparent;
+    
+  }
+  
+  .addbutton:hover .button__icon {
+    width: 38px;
+    transform: translateX(0);
+    color: white;
+    display: flex;
+    
+  }
+  
+  .addbutton:active {
+    border: 1px solid #484b50;
+    box-shadow: 0px 0px 0px 0px;
+    top: 5px;
+    left: 5px;
+  }
+
+  
+
+
+ /* gallery delete button styling */
+  .delbutton {
+    position: relative;
+    width: 60px;
+    height: 40px;
+    letter-spacing: 2px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    border: none;
+    background-color: #6c757d;
+    border-radius: 8px;
+
+  }
+  
+  .delbutton, .button__icon, .button__text {
+    transition: all 0.3s;
+  }
+  
+  .delbutton .button__text {
+    transform: translateX(0px);
+    font-weight: 600;
+    font-size: 14px;
+  }
+  
+  .delbutton .button__icon {
+    position: absolute;
+    transform: translateX(76px);
+    height: 105%;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+  }
+  
+  .delbutton .svg {
+    width: 30px;
+    stroke: #fff;
+  }
+  
+  .delbutton:hover {
+    background: #ff3636;
+  }
+  
+  .delbutton:hover .button__text {
+    color: transparent;
+  }
+  
+  .delbutton:hover .button__icon {
+    width: 45px;
+    transform: translateX(0);
+    color: white;
+    display: flex;
+  }
+  
+  .delbutton:active {
+    border: 1px solid #e62222;
+    box-shadow: 0px 0px 0px 0px;
+    top: 5px;
+    left: 5px;
+  }

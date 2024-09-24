@@ -276,7 +276,7 @@ const CoursePage = ({
             >
               <span
                 className="button__text"
-                style={{ fontFamily: "quando", color: "", fontWeight: "bold" }}
+                style={{ fontFamily: "kufi", color: "", fontSize:"20px", fontWeight: "bold" }}
               >
                 Reset
               </span>
@@ -291,7 +291,7 @@ const CoursePage = ({
                 <button
                   className="cssbuttons-io-button"
                   style={{
-                    fontFamily: "quando",
+                    fontFamily: "kufi",
                     fontWeight: "bold",
                   }}
                   onClick={togglePopup}
@@ -334,7 +334,9 @@ const CoursePage = ({
               chapterIndex={chapterIndex}
               onVideoEnd={handleVideoEnd}
             />
-            <div className="mb-3 ms-5 me-5 d-flex justify-content-between">
+            <div className="mb-3 ms-5 me-5 d-flex justify-content-between"
+            style={{fontFamily:"kufi"}}
+            >
               <div>
                 {prevChapter ? (
                   <Link
@@ -360,11 +362,11 @@ const CoursePage = ({
                     >
                       <button className="PreviousUnitButton">
                         <div className="PreviousUnitButtonArrow">
-                          <FastForward color="black" />
+                          <FastForward color="white" />
                         </div>
                         <span
                           className="UnitButtonBtnText"
-                          style={{ fontFamily: "angrybird" }}
+                          style={{fontFamily:"kufi"}}
                         >
                           Previous Unit
                         </span>
@@ -392,17 +394,18 @@ const CoursePage = ({
                   nextUnit && (
                     <Link
                       className="text-decoration-none"
+                      
                       href={`/course/${course.id}/${unitIndex + 1}/0`}
                     >
                       <button className="NextUnitButton">
                         <span
                           className="NextUnitButtonBtnText"
-                          style={{ fontFamily: "angrybird" }}
+                          style={{fontFamily:"kufi"}}
                         >
                           Next Unit
                         </span>
                         <div className="Unitarrow">
-                          <FastForward color="black" />
+                          <FastForward color="white" />
                         </div>
                       </button>
                     </Link>
@@ -415,7 +418,7 @@ const CoursePage = ({
 
         {/* Quiz card */}
         <div className="col-md-3 mt-4 mb-3">
-          <div className="">
+          <div>
             <QuizCards
               key={resetKey}
               chapterId={chapter.id}

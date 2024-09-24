@@ -68,7 +68,7 @@ const HistoryPopup = ({ chapterId, chapterName, onClose }) => {
                 </span>
               </h1>
               {isLoading ? (
-                <Spinner animation="border" role="status">
+                <Spinner animation="border" role="status" variant="light">
                   <span className="visually-hidden container"></span>
                 </Spinner>
               ) : historyData == null ? (

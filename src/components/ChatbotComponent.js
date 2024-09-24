@@ -47,8 +47,8 @@ export default function ChatbotComponent({ summary }) {
                 <ThreeDots
                   visible={true}
                   height="10"
-                  width="80"
-                  color="#000814"
+                  width="50"
+                  color="#fff"
                   radius="9"
                   ariaLabel="three-dots-loading"
                   wrapperStyle={{}}
@@ -69,8 +69,8 @@ export default function ChatbotComponent({ summary }) {
                 <ThreeDots
                   visible={true}
                   height="10"
-                  width="80"
-                  color="#000814"
+                  width="50"
+                  color="#fff"
                   radius="9"
                   ariaLabel="three-dots-loading"
                   wrapperStyle={{}}
@@ -92,8 +92,8 @@ export default function ChatbotComponent({ summary }) {
               <ThreeDots
                 visible={true}
                 height="10"
-                width="80"
-                color="#000814"
+                width="50"
+                color="#fff"
                 radius="9"
                 ariaLabel="three-dots-loading"
                 wrapperStyle={{}}
@@ -164,7 +164,7 @@ export default function ChatbotComponent({ summary }) {
         </span>
       </button>
       {isChatbotOpen && (
-        <div className="chatbot">
+        <div className="chatbot" style={{fontFamily: "kufi"}}>
           <header>
             <span>
               <IoCloseOutline />

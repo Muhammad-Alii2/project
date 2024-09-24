@@ -11,27 +11,6 @@
   
   .GalleryCourseCard:hover {
     transform: scale(1.05);
-    box-shadow: 0 0 0 5px #6c757d;
   }
 
-  @media (max-width: 768px) {
-    .GalleryCourseCard {
-      width: calc(100% - 5rem); /*width for smaller screens */
-      margin: 2rem auto; /* Center the card and reduce margin */
-    }
-  }
-  
-  @media (max-width: 600px) {
-    .GalleryCourseCard {
-      width: calc(100% - 2rem); /* width for even smaller screens */
-      margin: 1rem auto; /* Adjust margin for smaller screens */
-    }
-  }
-  
-  @media (max-width: 400px) {
-    .GalleryCourseCard {
-      width: calc(100% - 1rem); /*width for very small screens */
-      margin: 0.5rem auto; /* Adjust margin for very small screens */
-    }
-  }
   

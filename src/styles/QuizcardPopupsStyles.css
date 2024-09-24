@@ -25,10 +25,10 @@
   }
 
   .History-popup-inner {
-    background-color: #e8e8e8;
-    border: 1px solid white;
+    background-color: #0d1117;
+    border: none;
     box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
-    border-radius: 30px;
+    border-radius: 18px;
     cursor: pointer;
     transition: all 0.5s;
     display: flex;
@@ -40,7 +40,7 @@
   }
 
   .History-popup-inner:hover {
-    border: 3px solid #fbca1f;
+    border: 4px solid #6c757d;
   }
 
   .History-popup-content {
@@ -193,7 +193,7 @@
     display: block;
     padding: 10px 20px;
     color: #fff;
-    background-color: #292929;
+    background-color: #212529;
     overflow: hidden;
     box-shadow: inset 0px 0px 0px 1px transparent;
   }
@@ -260,15 +260,15 @@
 
   /*HistoryPopup Attempt-tag*/
   .History-popupAttempt {
-    --btn-default-bg: rgb(41, 41, 41);
+    --btn-default-bg: #212529;
     --btn-padding: 10px 10px;
-    --btn-hover-bg: rgb(51, 51, 51);
+    --btn-hover-bg: #212529;
     --btn-transition: .3s;
     --btn-letter-spacing: .1rem;
     --btn-animation-duration: 1.2s;
-    --btn-shadow-color: rgba(0, 0, 0, 0.137);
+    --btn-shadow-color: #212529;
     --btn-shadow: 0 2px 10px 0 var(--btn-shadow-color);
-    --hover-btn-color: #fbca1f;
+    --hover-btn-color: #f09042;
     --default-btn-color: #fff;
     --font-size: 16px;
     /* 👆 this field should not be empty */
@@ -443,7 +443,7 @@
 
   /* HistoryPopup Quiz result percentage*/
   .HistoryPopup-Attempt-resultScore {
-    background: #fed766;
+    background: #f09042;
     font-family: inherit;
     padding: 2px 10px;
     font-weight: 900;

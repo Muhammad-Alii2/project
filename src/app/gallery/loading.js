@@ -1,8 +1,6 @@
 "use client";
 import React from "react";
 import style from "@/styles/loader/loadingpage.module.css";
-// import style from "@/styles/loader/loader.module.css";
-import ScaleLoader from "react-spinners/ScaleLoader";
 import Spinner from "react-bootstrap/Spinner";
 
 const loading = () => {
@@ -16,14 +14,12 @@ const loading = () => {
         height: "100vh",
       }}
     >
-      <span className={style.loader}></span> {/*#ffb703*/}
-      {/* <ScaleLoader color="#ffa200"/> */} {/*Another type of spinner */}
+      <span className={style.loader}></span>
       <Spinner
         animation="border"
-        variant="dark"
-        style={{ width: "4rem", height: "4rem" }}
+        style={{  width: "4rem", height: "4rem", color: "#f09042", borderWidth: "0.5rem",  }}
       >
-        ;<span className="visually-hidden"></span>
+        ;<span className="visually-hidden">Loading...</span>
       </Spinner>
     </div>
   );

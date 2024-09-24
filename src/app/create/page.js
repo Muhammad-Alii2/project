@@ -3,7 +3,6 @@ import { redirect } from "next/navigation";
 import { getAuthSession } from "@/lib/auth";
 import style from "@/styles/coursepage.module.css";
 import React from "react";
-// import "src/styles/fonts.module.css";
 
 const page = async () => {
   const session = await getAuthSession();
@@ -14,12 +13,12 @@ const page = async () => {
     <div className={style.coursepage}>
       <div className="container mt-5 mb-5 ">
         <div className="mb-4" style={{ fontFamily: "stencil", color: "" }}>
-          <h1 className="text-uppercase fw-bold ">Create Course</h1>
-          <h5 className="text-capitalize">Through AI</h5>
+          <h1 className="text-uppercase fw-bold" style={{color: "#ffffff"}}>Create <span style={{color: "#f09042"}}>Course</span></h1>
+          <h5 className="text-capitalize" style={{color: "#ffffff"}}>Through AI</h5>
         </div>
         <div
-          className=" rounded-3 fs-4 container bg-dark-subtle text-white w-75"
-          style={{ fontFamily: "asul", color: "" }}
+          className=" fs-4 container text-white w-100 p-3 "
+          style={{ fontFamily: "kufi", background: '#0d1117', borderRadius: '12px', }}
         >
           {" "}
           {/* to make the background transperant use bg-transparent */}

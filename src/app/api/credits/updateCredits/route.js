@@ -1,5 +1,6 @@
 import { prisma } from "@/lib/db";
 import { NextResponse } from "next/server";
+import { getAuthSession } from "@/lib/auth";
 
 export async function POST(req, res) {
   try {
@@ -11,7 +12,16 @@ export async function POST(req, res) {
       credsToUpdate,
     } = await req.json();
 
-    if (!userId || !userRole || !actionPerformed || !credsToUpdate) {
+    const session = await getAuthSession()
+
+    if (!session || !session.user.role === "admin") {
+      return NextResponse.json(
+        { success: false, error: "Unauthoirized request" },
+        { status: 404 }
+      );
+    }
+
+    if (!userId || !actionPerformed || !credsToUpdate) {
       return NextResponse.json(
         { success: false, error: "Required fields are missing" },
         { status: 404 }

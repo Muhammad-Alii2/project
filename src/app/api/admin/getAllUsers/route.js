@@ -1,13 +1,14 @@
 import { prisma } from "@/lib/db";
 import { NextResponse } from "next/server";
+import { getAuthSession } from "@/lib/auth";
 
 export async function POST(req, res) {
   try {
-    const {userRole} = await req.json()
+    const session = await getAuthSession()
 
-    if(!userRole || userRole !== "admin") {
+    if (!session || !session.user.role === "admin") {
       return NextResponse.json(
-        { success: false, error: "Unauthorized Request" },
+        { success: false, error: "Unauthoirized request" },
         { status: 404 }
       );
     }

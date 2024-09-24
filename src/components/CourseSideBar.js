@@ -11,17 +11,13 @@ const CourseSideBar = ({
 }) => {
   const updatedList = course.units.map((unit, unitIndex) => {
     return (
-      <div className="m-1" key={unit.id}>
-        <hr className="flex-grow-0 bg-light" />
+      <div className="m-1" key={unit.id}
+      >
+        <hr className="flex-grow-1 bg-secondary" style={{ height: "4px", border: "none" }} />
+
         <h5
-          className="text-uppercase text-secondary fw-bold fs-6 text-start"
-          style={{ fontFamily: "asul", color: "" }}
-        >
-          Unit#{unitIndex + 1}
-        </h5>
-        <h5
-          className="text-capitalize fs-5 fw-bold text-start"
-          style={{ fontFamily: "asul", color: "#C0C2C9" }}
+          className="text-capitalize fs-4 fw-bold text-start"
+          style={{ fontFamily: "kufi", color: "#fff" }}
         >
           {unit.name}
         </h5>
@@ -34,16 +30,16 @@ const CourseSideBar = ({
           return (
             <div key={chapter.id}>
               <Link
-                className="text-decoration-none fw-bold lh-sm fs-6"
+                className="text-decoration-none fw-bold lh-base fs-5"
                 style={{
                   fontWeight:
                     chapter.id === currentChapterId ? "900" : "normal",
                   color: isChapterCompleted
-                    ? "#800080"
+                    ? "#9c399c"
                     : chapter.id === currentChapterId
-                    ? "#228B22"
+                    ? "#f09042"
                     : "#A7B8C3",
-                  fontFamily: "quando",
+                  fontFamily: "kufi",
                 }}
                 href={`/course/${course.id}/${unitIndex}/${chapterIndex}`}
               >
@@ -58,12 +54,12 @@ const CourseSideBar = ({
 
   return (
     <div
-      className="Course-sideBar mb-5 bg-black lh-1 bg-opacity-50 rounded-4 p-3"
-      style={{ height: "", width: "" }}
+      className="Course-sideBar mb-5 p-3"
+      style={{ fontFamily: "kufi", background: '#0d1117', borderRadius: '18px', }}
     >
       <h5
-        className="fs-1 text-center text-capitalize fw-bold p-2"
-        style={{ fontFamily: "angrybird", color: "#DEDEDE" }}
+        className="fs-1 text-center text-uppercase fw-bold"
+        style={{ fontFamily: "kufi", color: "#ffffff"}}
       >
         {course.name}
       </h5>
