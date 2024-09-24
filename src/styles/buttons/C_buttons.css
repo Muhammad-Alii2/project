@@ -1,0 +1,137 @@
+.creditButton {
+  font-size: 20px;
+  letter-spacing: 1px;
+  background-color: #f09042;
+  text-decoration: none;
+  text-transform: capitalize;
+  color: black;
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.creditButton:active {
+  box-shadow: 0px 0px 0px 0px;
+  top: 5px;
+  color: black;
+  left: 5px;
+}
+
+@media (min-width: 768px) {
+  .creditButton {
+    padding: 0.25em 0.75em;
+  }
+}
+
+
+/*CreditsCheckoutButton*/
+.CCP_Button {
+  font-size: 20px;
+  letter-spacing: 1px;
+  background-color: #f09042;
+  text-decoration: none;
+  text-transform: capitalize;
+  color: black;
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.CCP_Button:active {
+  box-shadow: 0px 0px 0px 0px;
+  top: 5px;
+  color: black;
+  left: 5px;
+}
+
+@media (min-width: 768px) {
+  .CCP_Button {
+    padding: 0.25em 0.75em;
+  }
+}
+
+/*OrderCompletetButton*/
+.CCP_Order {
+  font-size: 20px;
+  letter-spacing: 1px;
+  background-color: transparent; /* Make the background transparent */
+  text-decoration: none;
+  text-transform: capitalize;
+  color: #f09042; /* Set the color to match the outline color */
+  cursor: pointer;
+  border: 2px solid #f09042; /* Create an outline with the same color */
+  border-radius: 8px;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  padding: 10px 20px; /* Add some padding to make it look better */
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition on hover */
+}
+
+.CCP_Order:hover {
+  background-color: #f09042; /* Fill the button on hover */
+  color: black; /* Change the text color on hover */
+}
+
+
+.CCP_Order:active {
+  translate: 0 0.225em;
+}
+
+@media (min-width: 768px) {
+  .CCP_Order {
+    padding: 0.25em 0.75em;
+  }
+}
+
+
+.C_logo{
+color:#fff
+}
+.gmail:hover {
+  color: #EA4335;
+}
+.instagram:hover {
+  color: #d62976;
+}
+.facebook:hover {
+  color: #4A90E2;
+}
+.Linkedin:hover {
+  color: #0077B5;
+}
+.youtube:hover {
+  color: #FF0000;
+}
+.whatsapp:hover {
+  color: #25D366;
+}
+
+
+/* .gmail{
+  color: #EA4335;
+}
+.instagram {
+  color: #d62976;
+}
+.facebook{
+  color: #4A90E2;
+}
+.Linkedin{
+  color: #0077B5;
+}
+.youtube{
+  color: #FF0000;
+}
+.whatsapp{
+  color: #25D366;
+} */

@@ -29,10 +29,11 @@ const GalleryCourseCard = ({ course, handleDelete }) => {
   return (
     <>
       <div className={style.GalleryCourseCard} >
-        <div className="card bg-dark border border-dark">
+        <div className="card border border-0">
           {/*This chunk of code is for course name & picture*/}
           <Link
-            className="  font-monospace text-capitalize  text-decoration-none"
+            className="text-capitalize  text-decoration-none"
+            style={{ fontFamily: "kufi"}}
             href={`/course/${course.id}/0/0`}
           >
             <Image
@@ -57,12 +58,20 @@ const GalleryCourseCard = ({ course, handleDelete }) => {
 
           {/*This chunk of code is for units*/}
           <ul className=" list-group list-group-flush">
-            <li className=" list-group-item bg-dark">
+            <li className=" list-group-item"
+                style={{ backgroundColor: '#0d1117'}}>
               <h5 className="text-light font-monospace">Units:</h5>
               {course.units.map((unit, unitIndex) => {
                 return (
                   <Link
-                    className="text-start btn btn-outline-light fw-bold m-1"
+                    className="text-start btn m-1"
+                    style={{
+                      borderRadius: '8px', // rounded corners
+                      padding: '0.25rem 0.5rem', // padding
+                      fontSize: '1.1rem', // font size
+                      fontFamily: "Kufi",
+                      background:"#343a40"
+                    }}
                     href={`/course/${course.id}/${unitIndex}/0`}
                     key={unit.id}
                   >

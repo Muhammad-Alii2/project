@@ -2,8 +2,9 @@
 import React, { useEffect, useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import style from "@/styles/admin/AdminPanel.css";
+import sidebarStyles from "@/styles/sidebar.css";
 
-const AdminPanel = ({ session }) => {
+const AdminPanel = ({}) => {
   const [users, setUsers] = useState([]);
   const [filteredUsers, setFilteredUsers] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
@@ -52,7 +53,7 @@ const AdminPanel = ({ session }) => {
   const handleCreditsClick = (user) => {
     setCurrentUser(user);
     setInitialCredits(credits); // Save the initial credits value
-    setCredits(credits); 
+    setCredits(credits);
     setShowModal(true);
   };
 
@@ -69,10 +70,39 @@ const AdminPanel = ({ session }) => {
     setShowModal(false);
   };
 
-  const handleAddCredits = () => {
-    // Logic to update credits for the user can go here
-    setShowModal(false); 
+  const handleAddCredits = async () => {
+    try {
+      const response = await fetch('/api/credits/updateCredits', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          userId: currentUser.id,
+          userRole: currentUser.role,
+          actionPerformed: 'credits bought',
+          credsToUpdate: credits,
+        }),
+      });
+  
+      const data = await response.json();
+  
+      if (data.success) {
+        console.log('Credits updated successfully');
+  
+        // Reload the page after updating credits
+        window.location.reload();
+      } else {
+        console.error('Error updating credits:', data.error);
+      }
+    } catch (error) {
+      console.error('Error in handleAddCredits:', error);
+    } finally {
+      setShowModal(false);
+    }
   };
+  
+
 
   return (
     <div className="container-fluid mb-5">
@@ -122,7 +152,17 @@ const AdminPanel = ({ session }) => {
                         <td>{user.name}</td>
                         <td>{user.email}</td>
                         <td>{user.credits}</td>
-                        <td><span className="badge bg-primary">{user.role}</span></td>
+                        <td>
+                          <span
+                            className={`badge ${user.role === 'premium' ? 'bg-success text-dark text-capitalize p-2' :
+                              user.role === 'basic' ? 'bg-light text-dark text-capitalize p-2' :
+                                user.role === 'admin' ? 'bg-warning text-dark text-capitalize p-2' : 'bg-default'
+                              }`}
+                            style={{ fontSize: "16px" }}>
+                            {user.role}
+                          </span>
+                        </td>
+
                         <td>
                           <button onClick={() => handleCreditsClick(user)} className="CreditsBtn">
                             Credits
@@ -132,7 +172,7 @@ const AdminPanel = ({ session }) => {
                     ))
                   ) : (
                     <tr>
-                      <td colSpan="5" className="text-center">No users found</td>
+                      <td colSpan="5" className="text-center text-danger">No users found</td>
                     </tr>
                   )}
                 </tbody>

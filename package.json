@@ -34,6 +34,10 @@
     "react-pro-sidebar": "^1.1.0-alpha.1",
     "react-spinners": "^0.13.8",
     "react-youtube": "^10.1.0",
+    "remixicon": "^4.3.0",
+    "sharp": "^0.33.5",
+    "socket.io": "^4.8.0",
+    "socket.io-client": "^4.8.0",
     "youtube-transcript": "^1.0.6",
     "zod": "^3.22.4"
   },

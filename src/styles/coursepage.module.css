@@ -1,9 +1,23 @@
 .coursepage {
-    width: 100%;
-    height: 200vh;
+    width: auto;
+    min-height: 100vh;
     display: flex;
-    background-image: linear-gradient(rgba(50, 2, 2, 0.856), rgba(53, 53, 53, 0.849)), url('/images/bg2.jpg');
+    position: relative; /* Set the position to relative for proper stacking */
+    z-index: 1; /* Ensure the content appears on top */
+    background: none; /* Remove original background */
+}
+
+.coursepage::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('/images/bg3.jpg');
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
+    filter: blur(10px); /* Apply blur effect */
+    z-index: -1; /* Ensure it is behind the content */
 }

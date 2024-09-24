@@ -12,7 +12,7 @@ const SignOutButton = ({ user }) => {
             signOut();
           }}
         >
-          <div className=" font-monospace">log Out</div>
+          <div style={{fontFamily: "kufi", letterSpacing:"2px"}}>log Out</div>
         </button>
       </div>
     </>

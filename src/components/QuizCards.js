@@ -61,20 +61,20 @@ const QuizCards = ({
   return (
     <div className="QuizCard">
       <div
-        className="bg-black bg-opacity-50 rounded-4 p-2"
-        style={{ height: "", width: "" }}
+        className="p-3"
+        style={{background: '#0d1117', borderRadius: '18px' }}
       >
         <div className="d-flex flex-row align-items-center">
           {Object.keys(questionState).length > 0 && (
-            <button className="Reattempt-button" onClick={onChapterReattempt}>Reattempt</button>
+            <button className="Reattempt-button"  style={{ fontFamily: "kufi"}} onClick={onChapterReattempt}>Reattempt</button>
           )}
           <h5
             className="fs-2 text-center text-capitalize fw-bold mt-3 container"
-            style={{ fontFamily: "angrybird", color: "#DEDEDE" }}
+            style={{ fontFamily: "kufi", color: "#ffff" }}
           >
             Concept Check
           </h5>
-          <button className="History-button" onClick={toggleHistoryPopup}>History</button>
+          <button className="History-button" style={{ fontFamily: "kufi"}} onClick={toggleHistoryPopup}>History</button>
         </div>
 
         <div className="" style={{ height: "", width: "" }}>
@@ -82,28 +82,31 @@ const QuizCards = ({
             const options = JSON.parse(question.options);
             return (
               <div
-                className="border border-secondary rounded-4 p-2 mt-4 text-start Quiz"
+                className="p-2 mt-4 text-start border-0 fw-bold"
                 key={question.id}
                 style={{
                   backgroundColor:
                     questionState[question.id] === true
-                      ? "#27a300"
+                      ? "#28a745" //True color
                       : questionState[question.id] === false
-                        ? "#ae0000"
-                        : "",
-                  fontFamily: "quando",
-                  color: "#E9EAEC",
-                  fontSize: "14px",
+                        ? "#dc3545" //False color
+                        : "#212529",
+                  fontFamily: "kufi",
+                  color: "#A7B8C3",
+                  borderRadius: '8px'
                 }}
               >
+
                 {/*Question*/}
                 <h5
-                  className="fs-5 fw-bold"
-                  style={{ fontFamily: "asul", color: "#D0D2D7" }}
+                  className="fs-4 fw-bold"
+                  style={{ fontFamily: "kufi", color: "#fff" }}
                 >
                   {question.question}
                 </h5>
-                <div className="text-capitalize">
+                <div className="text-capitalize"
+                style={{fontSize: '16px'}}
+                >
                   {options.map((option, index) => (
                     <div key={index} className="mb-1">
                       <label htmlFor={question.id + index.toString()}>
@@ -126,7 +129,7 @@ const QuizCards = ({
                             extractedAnswers[question.id] !== null
                           }
                         />
-                        <span className="m-1">
+                        <span className="ms-2">
                           {option}
                         </span>
                       </label>
@@ -140,7 +143,7 @@ const QuizCards = ({
         <div className="d-grid mt-4">
           <button
             style={{
-              fontFamily: "quando",
+              fontFamily: "kufi",
               fontWeight: "bold",
               transition: "color 0.3s ease-in-out", // Adding a transition effect for color change
             }}

@@ -1,7 +1,9 @@
 .finalgeneration {
         width: auto;
-        height: auto;
-        background-image: linear-gradient(rgba(50, 2, 2, 0.856), rgba(53, 53, 53, 0.849)), url('/images/bg2.jpg');
+        min-height: 100vh; /* Minimum height of the gallery, covering full viewport */
+        background: #0d1117;
+        background: -webkit-linear-gradient(to left, #414345, #0d1117);
+        background: linear-gradient(to left, #414345, #0d1117);
         background-position: center;
         background-size: cover;
         background-attachment: fixed;

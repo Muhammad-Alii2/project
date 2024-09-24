@@ -37,7 +37,6 @@ const AdminAccountNav = ({ user }) => {
             )}
             
               <span className="badge bg-success" style={{ fontSize: "1rem", padding: "0.5em 1.5em" }}>
-                {/* Credits: 0 */}
                 Credits: {user.credits}
               </span>
           

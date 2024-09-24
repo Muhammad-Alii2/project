@@ -1,15 +1,78 @@
-.sidebarBtn{
-    /* font: inherit; */
-    background-color: #f0f0f0;
-    border: 0;
-    color: #242424;
-    border-radius: 0.5em;
-    font-size: 1.35rem;
-    padding: 0.150em 1em;
-    font-weight: 600;
-    transition: 0.15s ease;
-    cursor: pointer;
-  }
-  .sidebarBtn:active {
-    translate: 0 0.225em;
+/* navbar credit & role/plan button */
+.sidebarBtn {
+  background-color: #212529;
+  border: 0;
+  color: #f0f0f0;
+  border-radius: 0.5em;
+  font-size: 1.35rem;
+  padding: 0.150em 1em;
+  font-weight: 200;
+  transition: 0.15s ease;
+  cursor: pointer;
+  text-decoration: none;
+}
+.sidebarBtn:active {
+  translate: 0 0.225em;
+}
+
+
+/* sidebar Hamburger */
+.btnmenu {
+  width: 59px;
+  height: 50px;
+  border-radius: 10px;
+  border: none;
+  transition: all 0.5s ease-in-out;
+  font-size: 14px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 300;
+  display: inline-flex;
+  align-items: center;
+  background: #212529;
+  color: #f5f5f5;
+}
+
+.btnmenu .icon {
+  position: absolute;
+  height: 40px;
+  width: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s;
+}
+
+.btnmenu .text {
+  transform: translateX(40px);
+}
+
+.btnmenu:hover .text {
+  transition: all 0.5s;
+  opacity: 0;
+}
+
+.btnmenu:focus {
+  outline: none;
+}
+
+.btnmenu:active .icon {
+  translate: 0 0.225em;
+}
+
+/* sidebar buttons */
+.sidebarButton {
+  font-size: 19px;
+  background-color: #212529;
+  border-radius: 18px;
+  border: none;
+  padding: 1em 1.5em;
+  color: #f3eee7;
+  position: relative;
+  transition: 0.5s ease;
+  cursor: pointer;
+  letter-spacing: 2px;
+}
+
+.sidebarButton:active {
+  translate: 0 0.225em;
 }

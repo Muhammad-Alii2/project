@@ -4,6 +4,8 @@ import progress from "../../../public/images/mainpage/progress.png";
 import result from "../../../public/images/mainpage/result.png";
 import ChatBot from "../../../public/images/mainpage/ChatBot.png";
 import gallery from "../../../public/images/mainpage/gallery.png";
+import history from "../../../public/images/mainpage/history.png";
+import credit from "../../../public/images/mainpage/credit.png";
 import Image from 'next/image';
 
 const Work = () => {
@@ -38,6 +40,16 @@ const Work = () => {
       title: "User specified gallery",
       text: "Every user has a personalized gallery where they can access and organize content tailored to their preferences and needs.",
     },
+    {
+      image: credit,
+      title: "Credits Introduction",
+      text: "Unlock premium features by purchasing credits. Use your credits to access more",
+    },
+    {
+      image: history,
+      title: "Credit History",
+      text: "View all credit usage and payment transactions in one place, including purchase details and spending history",
+    }
   ];
 
   return (

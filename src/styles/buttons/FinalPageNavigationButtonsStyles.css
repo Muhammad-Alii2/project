@@ -6,9 +6,9 @@
   justify-content: flex-end;
   gap: 12px;
   cursor: pointer;
-  border: 3px solid rgb(255, 239, 94);
-  background-color: rgb(255, 239, 94);
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.137);
+  border: 3px solid #f09042;
+  background-color:#f09042;
+  border-radius: 8px;
 }
 
 .Previousbutton {
@@ -19,9 +19,9 @@
   justify-content: flex-end;
   gap: 12px;
   cursor: pointer;
-  border: 3px solid rgb(255, 239, 94);
-  background-color: rgb(255, 239, 94);
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.137);
+  border: 3px solid #f09042;
+  background-color:#f09042;
+  border-radius: 8px;
 }
 
 .BtnText {
@@ -30,8 +30,11 @@
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  background-color: rgb(27, 27, 27);
-  color: white;
+  color: #0d1117;
+  letter-spacing: 2px;
+ margin-top: 8px;
+ font-weight: bold;
+ font-size: 20px;
 }
 
 
@@ -76,27 +79,20 @@
   transform: scale(0.97);
 }
 
+
 .PreviousUnitButton{
-  background: rgb(255, 239, 94);
+  background: #6c757d;
   display: flex;
-  /* font-family: inherit; */
-  /* padding: 0.6em 1.3em; */
-  /* font-weight: 900; */
-  /* font-size: 18px; */
-  border: 3px solid black;
-  border-radius: 0.4em;
-  box-shadow: 0.1em 0.1em;
+  border: none;
+  border-radius: 8px;
   cursor: pointer;
-  color: #000;
 }
 .PreviousUnitButton:hover {
   transform: translate(-0.05em, -0.05em);
-  box-shadow: 0.15em 0.15em;
 }
 
 .PreviousUnitButton:active {
   transform: translate(0.05em, 0.05em);
-  box-shadow: 0.05em 0.05em;
 }
 .PreviousUnitButtonArrow{
   transform: scaleX(-1);
@@ -108,37 +104,26 @@
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  /* background-color: rgb(27, 27, 27); */
-  /* color: white; */
-  font-size: 18px;
-  color: #000;
-  margin-left: 4px;
+  font-size: 20px;
+  color: #fff;
+  margin-left: 6px;
 }
 .PreviousUnitButton:hover .PreviousUnitButtonArrow{
   animation: slide-in-right-mirrored 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
-
 .NextUnitButton{
-  background: rgb(255, 239, 94);
+  background: #6c757d;
   display: flex;
-  /* font-family: inherit; */
-  /* padding: 0.6em 1.3em; */
-  /* font-weight: 900; */
-  /* font-size: 18px; */
-  border: 3px solid black;
-  border-radius: 0.4em;
-  box-shadow: 0.1em 0.1em;
+  border: none;
+  border-radius: 8px;
   cursor: pointer;
-  color: #000;
 }
 .NextUnitButton:hover {
   transform: translate(-0.05em, -0.05em);
-  box-shadow: 0.15em 0.15em;
 }
 
 .NextUnitButton:active {
   transform: translate(0.05em, 0.05em);
-  box-shadow: 0.05em 0.05em;
 }
 .NextUnitButtonBtnText{
   width: 85%;
@@ -146,10 +131,8 @@
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  /* background-color: rgb(27, 27, 27); */
-  /* color: white; */
   font-size: 20px;
-  color: #000;
+  color: #fff;
   margin-right: 6px;
 }
 .NextUnitButton:hover .Unitarrow {

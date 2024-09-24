@@ -35,7 +35,10 @@ body {
 }
 
 body {
-  background-image: linear-gradient(rgba(30, 2, 2, 0.856), rgba(53, 53, 53, 0.849)), url('/images/bg2.jpg');
+  /* background-image: linear-gradient(rgba(30, 2, 2, 0.856), rgba(53, 53, 53, 0.849)), url('/images/bg2.jpg'); */
+  background: #0d1117;
+  background: -webkit-linear-gradient(to right, #414345, #0d1117);
+  background: linear-gradient(to left, #414345, #0d1117);
 }
 
 
@@ -111,7 +114,7 @@ nav {
 }
 
 .Home-primary-heading {
-  font-size: clamp(2rem, 5vw, 4rem);
+  font-size: clamp(2rem, 5vw, 3.8rem);
   color: #fff;
   /* line-height: 5rem; */
   max-width: 1015px;
@@ -123,6 +126,14 @@ nav {
   color: #ffff;
   /* line-height: 5rem; */
   max-width: 600px;
+}
+
+.team-primary-heading {
+  font-size: clamp(1rem, 2.5vw, 3rem);
+  /* color: #4c4c4c; */
+  color: #ffff;
+  /* line-height: 5rem; */
+  max-width: 1400px;
 }
 
 .gallery-primary-heading {

@@ -9,17 +9,17 @@ const Progressbar = ({ progress }) => {
           <div className="col-md-12 mt-4">
             <div className="container">
               <div
-                className="progress"
-                style={{ width: `100%` }}
+                className="progress bg-secondary"
+                style={{ width: `100%`, height: '5%' }}
                 role="progressbar"
-                aria-label="Animated striped example"
+                aria-label="Warning striped example"
                 aria-valuenow={`${progress}`}
                 aria-valuemin="0"
                 aria-valuemax="100"
               >
                 <div
-                  className="progress-bar progress-bar-striped progress-bar-animated bg-warning text-black fw-bold"
-                  style={{ width: `${progress}%` }}
+                  className="progress-bar text-dark fw-bold"
+                  style={{ width: `${progress}%`, background: "#f09042", fontFamily: "kufi", fontSize: "14px" }}
                 >
                   {parseInt(progress)}%
                 </div>

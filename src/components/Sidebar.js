@@ -4,15 +4,13 @@ import { getAuthSession } from "@/lib/auth";
 import UserAccountNav from "../components/UserAccountNav";
 import SignInButton from "../components/SignInButton";
 import SignOutButton from "../components/SignOutButton";
-import { BookCopy } from "lucide-react";
+import { FaBookMedical } from "react-icons/fa6";
 import { FcGallery, FcAbout } from "react-icons/fc";
-import { IoClose } from "react-icons/io5";
+import { GrContact } from "react-icons/gr";
+import { MdDataUsage } from "react-icons/md";
+// import { IoClose } from "react-icons/io5";
 import { BsCoin } from "react-icons/bs";
 import "../styles/fonts.module.css";
-import style from "@/styles/buttons/mainMenubuttonClick.module.css";
-import "../styles/fonts.module.css";
-import btnMenuStyles from "@/styles/btnMenuStyles.css";
-import sidebarNavAnimationStyles from "@/styles/sidebarNavAnimationStyles.css";
 import sidebarStyles from "@/styles/sidebar.css";
 
 const Sidebar = async () => {
@@ -20,9 +18,10 @@ const Sidebar = async () => {
   const isAdmin = session?.user?.role === 'admin';
   return (
     <>
-      <nav className="navbar bg-black fixed-fliud sticky-top ">
-        {/* <div className="border border-warning">  */}
+      <nav className="navbar fixed-fliud sticky-top border-0"
+        style={{ backgroundColor: '#0d1117'}}>
         <div className="container-fluid">
+           {/* Menu Hamburger */}
           <button
             className="btnmenu"
             data-bs-toggle="offcanvas"
@@ -33,143 +32,142 @@ const Sidebar = async () => {
             <span className="icon">
               <svg viewBox="0 0 175 80" width="40" height="40">
                 <rect width="80" height="15" fill="#f0f0f0" rx="10"></rect>
-                <rect
-                  y="30"
-                  width="80"
-                  height="15"
-                  fill="#f0f0f0"
-                  rx="10"
-                ></rect>
-                <rect
-                  y="60"
-                  width="80"
-                  height="15"
-                  fill="#f0f0f0"
-                  rx="10"
-                ></rect>
+                <rect y="30" width="80" height="15" fill="#f0f0f0" rx="10"></rect>
+                <rect y="60" width="80" height="15" fill="#f0f0f0" rx="10"></rect>
               </svg>
             </span>
-            <span className="text">Menu</span>
           </button>
           <Link
-            className="fs-1 lh-1 navbar-brand text-light btn btn-outline-warning m-2"
+            className="fs-1 lh-1 navbar-brand text-light m-2"
             href="/"
-            style={{ fontFamily: "angrybird" }}
+            style={{ fontFamily: "kufi"}}
           >
             {" "}
-            Learnify
+            <div>
+            Ins<span className="" style={{fontFamily:"Android101", color:"#f09042"}}>AI</span>ghtful
+            </div>
           </Link>
-          {/* Display credits here */}
+          {/* Display credits & plan/role here */}
           {session?.user && (
             <Link
               href="/credit"
               className="ms-auto me-3 sidebarBtn text-decoration-none"
-            >
-              <span >
+              style={{fontFamily:'kufi'}}
+              >
+              <span>
                 Credits: {session.user.credits}
               </span>
             </Link>
           )}
           {session?.user && (
-            <span className="sidebarBtn">
+            <span className="sidebarBtn" style={{fontFamily:'kufi'}}>
               {isAdmin ? (
                 <Link href="/admin"
-                  className="text-dark text-decoration-none"
+                  className="sidebarBtn text-capitalize"
                 >
                   Role: {session.user.role}
                 </Link>
               ) : (
-                `Plan: ${session.user.role}`
+                <Link href="/credit"
+                  className="sidebarBtn text-capitalize "
+                >
+                  Plan: {session.user.role}
+                </Link>
               )}
             </span>
           )}
-
         </div>
-
         <div
-          className="offcanvas offcanvas-start bg-black"
+          className="offcanvas offcanvas-start border-0"
+          style={{background:'#0d1117'}}
           tabIndex="-1"
           id="offcanvasNavbar"
           aria-labelledby="offcanvasNavbarLabel"
         >
           <div className="offcanvas-header">
-            <Link
-              href="/"
-              className="offcanvas-title fs-2 btn btn-outline-warning"
-              id="offcanvasNavbarLabel"
-              style={{ fontFamily: "angrybird" }}
-            >
-              Learnify
-            </Link>
-            <button
-              type="button"
-              className="btn btn-outline-warning"
-              data-bs-dismiss="offcanvas"
-              aria-label="Close"
-            >
-              {" "}
-              <IoClose size={20} />
-            </button>
           </div>
-          <div className="offcanvas-body">
+          <div className="offcanvas-body" style={{fontFamily:"kufi"}}>
             <ul className="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <span className="text-muted">USER PANEL</span>
+             {/* USER PANEL*/}
               <li>
                 {session?.user && <UserAccountNav user={session.user} />}
               </li>
+              <span className="text-muted mt-5">MANAGE</span>
               {session?.user && (
                 <li className="nav-item">
                   <Link
-                    className={`m-1 nav-link btn font-monospace fw-bold text-start ${style.button}`}
+                    className={`m-1 nav-link btn fw-bold text-start sidebarButton`}
                     href="/create"
                   >
                     {" "}
-                    <BookCopy /> Create Course
+                    <FaBookMedical size={25} style={{marginBottom:"6px"}} /> Create Course
                   </Link>
                 </li>
               )}
               {session?.user && (
                 <li className="nav-item">
                   <Link
-                    className={` m-1 nav-link btn font-monospace fw-bold text-start ${style.button}`}
+                    className={` m-1 nav-link btn fw-bold text-start sidebarButton`}
                     href="/gallery"
                   >
                     {" "}
-                    <FcGallery /> Gallery
+                    <FcGallery size={25} style={{marginBottom:"6px"}}  /> Gallery
                   </Link>
                 </li>
               )}
+              {session?.user && (
+              <Link
+                className={` m-1 nav-link btn fw-bold text-start sidebarButton`}
+                href="/credit"
+              >
+                <li className="nav-item">
+                  {" "}
+                  <MdDataUsage size={25} style={{marginBottom:"6px"}} /> Credits Usage
+                </li>
+              </Link>
+               )}
+               {session?.user && (
+              <Link
+                className={` m-1 nav-link btn fw-bold text-start sidebarButton`}
+                href="/CreditsCheckoutPage"
+              >
+                <li className="nav-item">
+                  {" "}
+                  <BsCoin size={25} style={{marginBottom:"6px"}} /> Buy Credits
+                </li>
+              </Link>
+               )}
 
+              <span className="text-muted mt-5">CONTACT DETAILS</span>
               <li className="nav-item">
                 <Link
-                  className={` m-1 nav-link btn font-monospace fw-bold text-start ${style.button}`}
-                  href="/credit"
+                  className={` m-1 nav-link btn fw-bold text-start sidebarButton`}
+                  href="/"
                 >
                   {" "}
-                  <BsCoin /> Buy Credits
+                  <FcAbout size={25} style={{marginBottom:"5px"}}  /> About us
                 </Link>
               </li>
-
-
               <li className="nav-item">
                 <Link
-                  className={` m-1 nav-link btn font-monospace fw-bold text-start ${style.button}`}
-                  href="/about"
+                  className={` m-1 nav-link btn fw-bold text-start sidebarButton`}
+                  href="/contact"
                 >
                   {" "}
-                  <FcAbout /> About-us
+                  <GrContact size={25} style={{marginBottom:"1px"}}  /> Contact us
                 </Link>
               </li>
             </ul>
             <div className="fixed-bottom m-3">
               <div>
-                {session?.user && <SignOutButton />}
+                {session?.user && <SignOutButton/>}
               </div>
               <div>{!session?.user && <SignInButton />}</div>
             </div>
 
           </div>
         </div>
-        {/* </div> */}
       </nav>
     </>
   );

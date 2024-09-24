@@ -1,36 +1,33 @@
 "use client";
 import React from "react";
+import { BiCoinStack } from 'react-icons/bi';
 
 const UserAccountNav = ({ user }) => {
   return (
-    <>
-      <div className="bg-black">
-        <div className="card">
-          <ul className="list-group list-group-flush ">
-            {user?.image && (
-              <li className="list-group-item">
-                <img
-                  src={user.image}
-                  alt={`${user.name}'s profile`}
-                  className="rounded-3 border border-warning border border-2"
-                  style={{ width: "50px", height: "50px" }}
-                />
-              </li>
-            )}
-            <li className="list-group-item font-monospace ">
-            {user?.name && <div>Name: {user.name}</div>}
-            </li>
-            <li className="list-group-item font-monospace">
-              {user?.email && <div>Email: {user.email}</div>}
-            </li>
-            <li className="list-group-item font-monospace">
-             <div>Credits: {user.credits}</div>
-            {/* {user?.credits && <div>Credits: {user.credits}</div>} */}
-            </li>
-          </ul>
+    <div className="d-flex justify-content-between align-items-center p-3" style={{background:'#212529', fontFamily:'kufi', borderRadius:'18px' }}>
+      <div className="d-flex align-items-center">
+        {user?.image && (
+       <img
+       src={user.image}
+       alt={`${user.name}'s profile`}
+       className="rounded-circle"
+       style={{
+         width: "70px",
+         height: "70px",
+         marginRight: "15px",
+         border: "2px solid #f09042", // Custom border color (replace with your desired color)
+       }}
+     />     
+        )}
+        <div className="d-flex flex-column">
+          {user?.name && <div style={{ fontSize: "24px"}}>{user.name} </div>}
+          {user?.email && <div style={{ fontSize: "14px" }}>{user.email}</div>}
         </div>
       </div>
-    </>
+      <div className="mt-4" style={{ fontSize: "26px" }}>
+      <BiCoinStack size={25} style={{ marginLeft: '8px', marginBottom:'5px' }} /> {user?.credits || "0"}
+      </div>
+    </div>
   );
 };
 

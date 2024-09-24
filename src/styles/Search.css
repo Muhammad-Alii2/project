@@ -8,10 +8,11 @@
 }
 
 .SearchBar{
-  border-radius: 10px;
-  outline: 2px solid #FEBF00;
+  border-radius: 14px;
+  outline: 4px solid #0d1117;
+  /* outline: 4px solid #f09042; */
   border: 0;
-  background-color: #e2e2e2;
+  background-color: #fff;
   outline-offset: 3px;
   padding: 10px 1rem;
   transition: 0.25s;
@@ -20,6 +21,5 @@
 }
 
 .SearchBar:focus {
-  outline-offset: 5px;
-  background-color: #fff
+  outline-offset: 10px;
 }

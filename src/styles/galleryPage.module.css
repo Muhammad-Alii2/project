@@ -1,31 +1,23 @@
 .galleryPage {
     width: auto;
-    height: auto;
+    min-height: 100vh;
     display: flex;
-    background-image: linear-gradient(rgba(30, 2, 2, 0.856), rgba(53, 53, 53, 0.849)), url('/images/bg2.jpg');
+    position: relative; /* Set the position to relative for proper stacking */
+    z-index: 1; /* Ensure the content appears on top */
+    background: none; /* Remove original background */
+}
+
+.galleryPage::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('/images/bg3.jpg');
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
+    filter: blur(5px); /* Apply blur effect */
+    z-index: -1; /* Ensure it is behind the content */
 }
-
-/* for provide background a black tint-add this with in bg image line */
-/* linear-gradient(rgba(15, 2, 2, 0.856),rgba(0, 0, 0, 0.849)), */
-
-/* for provide background a blackesh red tint-add this with in bg image line  */
-/* linear-gradient(rgba(50, 2, 2, 0.856),rgba(0, 0, 0, 0.849)), */
-
-
-/*Pattern one
-/* background-image: repeating-radial-gradient(  #0c0a0a 80%,#2f312f 90%,#3f4549 90%);
-background-size: 65px 65px; */
-
-/*Pattern two
-/* background-image: repeating-radial-gradient(#0c0a0a 80%, #2f312f 90%, #3f4549 90%);
-background-size: 65px 65px; */
-
-/*Pattern three
-/* --color: rgba(114, 114, 114, 0.3);
-background-color: #191a1a;
-background-image: linear-gradient(0deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%,transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%,transparent),
-linear-gradient(90deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%,transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%,transparent);
-background-size: 55px 55px; */
