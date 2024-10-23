@@ -143,7 +143,7 @@ const Sidebar = async () => {
               <li className="nav-item">
                 <Link
                   className={` m-1 nav-link btn fw-bold text-start sidebarButton`}
-                  href="/"
+                  href="/about"
                 >
                   {" "}
                   <FcAbout size={25} style={{marginBottom:"5px"}}  /> About us

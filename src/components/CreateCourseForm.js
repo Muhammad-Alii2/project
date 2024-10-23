@@ -54,7 +54,7 @@ const CreateCourseForm =  ({ session }) => {
 
   const checkCreditsAndSubmit = (data) => {
     // Check if the user has enough credits
-    if (session.user.credits < 1) {
+    if (session.user.credits < 5) {
       alert(
         "Your credits are low. You need a minimum of 1 credit to continue. Kindly buy more credits."
       );
@@ -89,7 +89,7 @@ const CreateCourseForm =  ({ session }) => {
               userRole: session.user.role,
               courseId: course_id,
               actionPerformed: data.title,
-              credsToUpdate: -1, // Deduct 1 credit
+              credsToUpdate: -5, // Deduct 1 credit
             }),
           });
 

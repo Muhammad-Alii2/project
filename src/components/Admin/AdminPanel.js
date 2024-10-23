@@ -10,8 +10,8 @@ const AdminPanel = ({}) => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedRole, setSelectedRole] = useState('');
   const [currentUser, setCurrentUser] = useState(null);
-  const [credits, setCredits] = useState(2);
-  const [initialCredits, setInitialCredits] = useState(2); // Track initial credits
+  const [credits, setCredits] = useState(5);
+  const [initialCredits, setInitialCredits] = useState(); // Track initial credits
   const [showModal, setShowModal] = useState(false);
 
   useEffect(() => {
@@ -58,11 +58,11 @@ const AdminPanel = ({}) => {
   };
 
   const handleIncrement = () => {
-    setCredits((prevCredits) => prevCredits + 1);
+    setCredits((prevCredits) => prevCredits + 5);
   };
 
   const handleDecrement = () => {
-    setCredits((prevCredits) => (prevCredits > 0 ? prevCredits - 1 : 0));
+    setCredits((prevCredits) => (prevCredits > 5 ? prevCredits - 5 : 0));
   };
 
   const handleCloseModal = () => {

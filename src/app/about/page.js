@@ -1,23 +1,18 @@
 import React from "react";
-import UpsideAboutUs from "@/components/UpsideAboutUs";
-import ServicesAboutUs from "@/components/ServicesAboutUs";
+import Home from "@/components/Mainpage/Home";
+import AboutGallery from "@/components/Mainpage/AboutGallery";
+import Work from "@/components/Mainpage/Work";
 import OurTeamAboutUs from "@/components/OurTeamAboutUs";
-import style from "@/styles/coursepage.module.css";
+import styles from '@/styles/mainpageStyles.css';
 
 const page = () => {
-  return (
-    <> 
-      <div>
-        <UpsideAboutUs />
-      </div>
-      <span>
-        <ServicesAboutUs />
-      </span>
-      <div>
-        <OurTeamAboutUs />
-      </div>
-     
-    </>
-  );
-};
+  return ( 
+    <div className="App">
+    <Home />
+    <AboutGallery />
+    <Work />
+    <OurTeamAboutUs/>
+  </div> 
+  )
+}
 export default page;
