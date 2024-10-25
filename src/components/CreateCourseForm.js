@@ -56,7 +56,7 @@ const CreateCourseForm =  ({ session }) => {
     // Check if the user has enough credits
     if (session.user.credits < 5) {
       alert(
-        "Your credits are low. You need a minimum of 1 credit to continue. Kindly buy more credits."
+        "Your credits are low. You need a minimum of 5 credit to continue. Kindly buy more credits."
       );
       return; // Prevent form submission
     }

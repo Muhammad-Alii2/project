@@ -166,7 +166,7 @@ const CreditsCheckoutPage = ({ session }) => {
                         >
                             <CgDanger size={30} className="me-2 mb-2" />
                             Please send the payment receipt via
-                            <a href="https://wa.me/92XXXXXXXXXX" style={{ marginLeft: '5px', color: 'inherit' }}>
+                            <a href="https://wa.me/+923708493293" style={{ marginLeft: '5px', color: 'inherit' }}>
                                 WhatsApp
                             </a>
                         </p>

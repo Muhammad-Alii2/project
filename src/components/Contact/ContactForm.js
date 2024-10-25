@@ -82,11 +82,11 @@ const ContactForm = () => {
                     
                     <div className="d-flex align-items-center mb-3">
                         <div className="contact-logo" style={logoStyle}>
-                            <Link className="whatsapp C_logo" href="https://www.linkedin.com/in/ahsan-hafeez-116943278/" target="_blank" rel="noopener noreferrer">
+                            <Link className="whatsapp C_logo" href="https://wa.me/+923708493293" target="_blank" rel="noopener noreferrer">
                                 <FaWhatsapp size={30} />
                             </Link>
                         </div>
-                        <Link className="whatsapp C_logo  text-decoration-none" href="https://www.linkedin.com/company/insaightful/" target="_blank" rel="noopener noreferrer">
+                        <Link className="whatsapp C_logo  text-decoration-none" href="https://wa.me/+923708493293" target="_blank" rel="noopener noreferrer">
                         <span className="ms-3" style={{fontSize:"20px"}}>Whatsapp/InsAIghtful</span></Link>
                     </div>
                 </div>
