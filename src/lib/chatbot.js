@@ -5,13 +5,12 @@ import {
 import { RunnableSequence } from "@langchain/core/runnables";
 import { ChatOpenAI } from "@langchain/openai";
 import { BufferMemory } from "langchain/memory";
-import { openaikey } from "../../openaikey";
 
-const model = new ChatOpenAI({ openAIApiKey: openaikey });
+const model = new ChatOpenAI({ openAIApiKey: process.env.OpenAI });
 const prompt = ChatPromptTemplate.fromMessages([
   [
     "system",
-    "You are a chatbot assisstant at an online education platform named *Learnify* that answers to student's questions correctly and cocisely based on the trnascript your'e given.",
+    "You are a chatbot assisstant at an online education platform named *InsAIghtful* that answers to student's questions correctly and cocisely based on the trnascript your'e given.",
   ],
   new MessagesPlaceholder("history"),
   ["human", "{input}"],
