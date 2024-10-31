@@ -4,13 +4,14 @@ import React from "react";
 
 const MainPageSignInButton = () => {
   return (
-    <div
+    <button
+      className="btn fs-4" style={{fontFamily: "kufi", letterSpacing:"2px"}}
       onClick={() => {
         signIn("google");
       }}
     >
-      log In
-    </div>
+      Login
+    </button>
   );
 };
 
